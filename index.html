@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Chahid</a>
+<nav>
+  <a href="/" class="active">Home</a>
+  <a href="/past-work">Past Work</a>
+  <a href="/experience">Experience</a>
+  <a href="/contact">Contact</a>
+</nav>
+
+    </header>
+
+    <section class="home">
+<div class="home-img">
+    <img src="avatar.jpg" alt="Avatar">
+</div>
+        <div class="home-content">
+            <h1>Hello, Im <span>Chahid</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>I'm a passionate script writer, bot developer, and website developer with a creative mindset and a sharp eye for detail. From immersive roleplay scripts to advanced Discord bots and sleek websites — I turn ideas into powerful, real-world results. Let's build something amazing together.</p>
+            <div class="social-icons">
+                <a href="https://discord.com/users/1175738056750415872"><i class="fa-brands fa-discord"></i></a>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+const typedTextSpan = document.querySelector(".typing-text span");
+const words = ["Web Developer", "Bot Developer", "Web Designer", "Script Writer"];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function type() {
+    const currentWord = words[wordIndex];
+    let delay = 300;
+
+    if (isDeleting) {
+        charIndex--;
+        delay = 50;
+    } else {
+        charIndex++;
+        delay = 200;
+    }
+
+
+    if (charIndex < 0) {
+        charIndex = 0;
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        delay = 100;
+    }
+
+    if (charIndex > currentWord.length) {
+        charIndex = currentWord.length;
+    }
+
+    typedTextSpan.textContent = currentWord.substring(0, charIndex);
+
+    if (!isDeleting && charIndex === currentWord.length) {
+        // Pauze aan het einde van het woord voor 2 seconden
+        delay = 3000;
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        // Pauze na deleten
+        delay = 300;
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+    }
+
+    setTimeout(type, delay);
+}
+
+document.addEventListener("DOMContentLoaded", type);
+
+    </script>
+</body>
+</html>
