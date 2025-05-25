@@ -271,12 +271,13 @@ span{
 }
 
 .btn {
+    display: flex;
     color:#4ba1b7;
     border: 2px solid #4ba1b7;
     height: 33px;
     width: 105px;
     text-align: center;
-    line-height: 30.5px;
+    /*line-height: 30.5px;*/
     border-radius: 15px;
     font-size: 12px;
     transition: transform 0.3s ease;
