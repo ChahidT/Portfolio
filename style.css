@@ -258,3 +258,35 @@ span{
     transform: scale(1.1);
 }
 }
+
+.btncontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 76.5%;
+    left: 47.1%;
+    position: absolute;
+    color:#4ba1b7;
+    border: #161616;
+}
+
+.btn {
+    color:#4ba1b7;
+    border: 2px solid #4ba1b7;
+    height: 33px;
+    width: 105px;
+    text-align: center;
+    line-height: 30.5px;
+    border-radius: 15px;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    color: black;
+    border: black;
+    background-color: #4ba1b7;
+    box-shadow: 0 0 25px #4ba1b7;
+    line-height: 35.5px;
+    transform: scale(1.1);
+}
