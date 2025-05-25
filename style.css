@@ -282,7 +282,8 @@ span{
     border: 2px solid #4ba1b7;
     border-radius: 15px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: 0.3s ease;
+    text-size: 5px;
 }
 
 .btn:hover {
